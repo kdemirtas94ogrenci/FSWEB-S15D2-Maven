@@ -27,7 +27,12 @@ public class StringSet {
         text = text.replaceAll("[^a-zA-Z\\s]", "").toLowerCase();
         String[] words = text.split("\\s+");
 
-        Set<String> uniqueWords = new TreeSet<>(Arrays.asList(words));
+        Set<String> uniqueWords = new TreeSet<>();
+
+        for (String word : words) {
+            uniqueWords.add(word);
+        }
+
         return uniqueWords;
     }
 }
